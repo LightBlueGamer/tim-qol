@@ -1,4 +1,5 @@
 foundry-config.yaml
 foundry
 node_modules/
-package-lock.json
+mountain-core/
+tools/

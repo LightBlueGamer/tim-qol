@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "createSymlinks": "node ./tools/create-symlink.mjs"
+    "createSymlinks": "node ./tools/create-symlink.mjs",
+    "package": "node ./tools/package.mjs"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "js-yaml": "^4.1.1"
   },
   "devDependencies": {
-    "foundryvtt-simple-calendar": "^2.4.18"
+    "foundryvtt-simple-calendar": "^2.4.18",
+    "zip-a-folder": "^6.1.1"
   }
 }
