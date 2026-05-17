@@ -1,13 +1,15 @@
-Hooks.on("ready", async function () {
-  await ChatMessage.create({
-    content: `The module has loaded current in-game time is: ${date.year} ${date.month} ${date.day} ${date.hour}:${date.minute}:${date.seconds}`,
-  })
+let currentDate;
+Hooks.once("ready", () => {
+  console.log("Ready!");
+  console.log(game.actors.filter(a => a.type !== "npc")[0].items.contents.filter(item => item.type === "facility"));
 });
 
-Hooks.on(SimpleCalendar.Hooks.Ready, () => {
-  const date = SimpleCalendar.api.currentDateTime();
+Hooks.once(SimpleCalendar.Hooks.Ready, () => {
+  const date = SimpleCalendar.api.currentDateTimeDisplay();
+  currentDate = SimpleCalendar.api.dateToTimestamp({});
+  console.log(currentDate);
   ChatMessage.create({
-    content: `The module has loaded current in-game time is: ${date.year} ${date.month} ${date.day} ${date.hour}:${date.minute}:${date.seconds}`,
+    content: `The module has loaded current in-game time is: ${date.date} ${date.time}`,
     speaker: ChatMessage.getSpeaker({ alias: "Mountains" }),
-  })
-})
+  });
+});
