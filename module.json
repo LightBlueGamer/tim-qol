@@ -1,7 +1,7 @@
 {
   "id": "mountain-module",
   "title": "Mountain Module",
-  "version": "14.0.1",
+  "version": "14.0.0-2",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -32,12 +32,15 @@
       }
     ]
   },
-  "description": "Core Module for the Mountains of Eternity Campaign",
-  "esmodules": ["scripts/module.js"],
+  "description": "<p>Core Module for the Mountains of Eternity Campaign</p>",
+  "esmodules": [
+    "scripts/module.js"
+  ],
   "authors": [
     {
       "name": "Tim",
-      "url": "https://git.mot-dnd.org/Tim"
+      "url": "https://git.mot-dnd.org/Tim",
+      "flags": {}
     }
   ],
   "url": "https://git.mot-dnd.org/Tim/mountain-module",
