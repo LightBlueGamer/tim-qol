@@ -1,7 +1,7 @@
 {
     "id": "tim-qol",
     "title": "Tim's Quality of Life Improvements",
-    "version": "14.0.0-8",
+    "version": "14.0.0-9",
     "compatibility": {
         "minimum": "14",
         "verified": "14"

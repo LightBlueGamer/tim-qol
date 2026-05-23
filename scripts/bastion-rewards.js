@@ -1,18 +1,13 @@
 import { bastionDefender } from './ids.js';
-export async function bastionReward(actorId, type, size) {
-    console.log('=== bastionReward called ===');
-    console.log('actorId:', actorId);
-    console.log('type (before):', type);
-    console.log('size (before):', size);
-    type = type.toLowerCase();
-    size = size.toLowerCase();
+export async function bastionReward(actorId, facilityId) {
     const actor = game.actors.get(actorId);
+    const facility = actor.items.get(facilityId);
+    console.log(facility);
+    const type = facility.name.toLowerCase();
+    const size = facility.system.size.toLowerCase();
     switch (type) {
         case 'barrack': {
-            console.log(`Rewarding ${actor.name} for completing a ${size} barrack`);
-            const facility = actor.items.find(
-                (i) => i.type === 'facility' && i.name.toLowerCase() === 'barrack'
-            );
+            
 
             if (!facility) {
                 ui.notifications.warn('Barrack facility not found');
