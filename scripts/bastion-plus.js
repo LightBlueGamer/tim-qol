@@ -24,19 +24,25 @@ Hooks.on('dnd5e.preActivityConsumption', (activity, usageConfig, messageConfig) 
     const level = actor.items.filter(i => i.type === "class").reduce((acc, curr) => acc + curr.system.levels, 0);
     const maxAmount = level >= 13 ? 5000 : level >= 9 ? 2000 : 500;
     if(facilityItem.name.toLowerCase() === "storehouse" && facility.activity.type === "order") {
-        if(facility.order.costs.gold <= 0) {
+        if(Math.floor(facility.order.costs.gold) <= 0) {
             Dialog.prompt({
                 title: "Storehouse",
-                content: "Sire, we cannot trade without any gold"
+                content: "Sire, we cannot trade without any gold."
             });
             return false
-        } else if(facility.order.costs.gold > maxAmount) {
+        } else if(Math.floor(facility.order.costs.gold) > maxAmount) {
             Dialog.prompt({
                 title: "Storehouse",
                 content: "Sire, we cannot hold that much gold for you."
             });
             return false
-        }
+        } else if(actor.system.currency.gp < Math.floor(facility.order.costs.gold)) {
+            Dialog.prompt({
+                title: "Storehouse",
+                content: "Sire, I'm afraid you don't have the funds to trade with."
+            });
+            return false
+        } else setStorehouseTradeValue(actor.id, facilityItem.id, facility.order.costs.gold);
     }
 })
 
@@ -55,4 +61,18 @@ async function updateBastions(days) {
             }
         }
     }
+}
+
+
+function setStorehouseTradeValue(actorId, facilityId, amount) {
+    const actor = game.actors.get(actorId);
+    const facility = actor.items.get(facilityId);
+
+    actor.update({
+        "system.currency.gp": actor.system.currency.gp - amount,
+    })
+    
+    facility.setFlag("tim-qol", "bastion-plus", {
+        "storehouseGold": amount
+    })
 }
