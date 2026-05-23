@@ -52,7 +52,7 @@
     ],
     "url": "https://git.mot-dnd.org/Tim/tim-qol",
     "manifest": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/module.json",
-    "download": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/package/tim-qol-v14.0.0-11.zip",
+    "download": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/packages/tim-qol-v14.0.0-11.zip",
     "description": "",
     "flags": {}
 }
