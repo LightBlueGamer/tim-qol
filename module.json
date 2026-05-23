@@ -1,7 +1,7 @@
 {
-    "id": "mountain-module",
-    "title": "Mountain Module",
-    "version": "14.0.0-7",
+    "id": "tim-qol",
+    "title": "Tim's Quality of Life Improvements",
+    "version": "14.0.0-8",
     "compatibility": {
         "minimum": "14",
         "verified": "14"
@@ -10,43 +10,49 @@
         "systems": [
             {
                 "id": "dnd5e",
-                "type": "system"
+                "type": "system",
+                "compatibility": {}
             }
         ],
-        "requires": [
+        "recommends": [
             {
-                "id": "foundryvtt-simple-calendar-reborn",
-                "type": "module"
+                "id": "calendaria",
+                "type": "module",
+                "compatibility": {}
             }
         ]
     },
     "esmodules": ["scripts/module.js", "scripts/bastion-plus.js"],
     "packFolders": [
         {
-            "name": "Mountain Core",
+            "name": "Tim's Compendium",
             "color": "#2f549d",
-            "packs": ["mountain-core-actors"]
+            "packs": ["tim-qol-actors"],
+            "folders": []
         }
     ],
     "packs": [
         {
-            "name": "mountain-core-actors",
+            "name": "tim-qol-actors",
             "label": "Actors",
+            "path": "packs/actors",
             "type": "Actor",
-            "path": "./packs/actors",
-            "module": "mountain-module",
+            "system": "dnd5e",
             "ownership": {
                 "GAMEMASTER": "OWNER"
             },
-            "system": "dnd5e"
+            "flags": {}
         }
     ],
     "authors": [
         {
-            "name": "Tim"
+            "name": "Tim",
+            "flags": {}
         }
     ],
-    "url": "https://git.mot-dnd.org/Tim/mountain-module",
-    "manifest": "https://git.mot-dnd.org/Tim/mountain-module/raw/branch/master/module.json",
-    "download": "https://git.mot-dnd.org/Tim/mountain-module/raw/branch/master/package/mountain-core-v14.0.0.zip"
+    "url": "https://git.mot-dnd.org/Tim/tim-qol",
+    "manifest": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/module.json",
+    "download": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/package/tim-qol-v14.0.0.zip",
+    "description": "",
+    "flags": {}
 }
