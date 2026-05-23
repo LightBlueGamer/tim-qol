@@ -9,6 +9,7 @@ Download link: https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/module.json
 ### Bastion Automation
 Automatically advances bastion turns for:
 - Barracks
+- Storehouse
 
 ## Documentation
 
