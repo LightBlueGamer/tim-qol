@@ -16,6 +16,30 @@ Hooks.on('updateWorldTime', async (time) => {
     }
 });
 
+Hooks.on('dnd5e.preActivityConsumption', (activity, usageConfig, messageConfig) => {
+    console.log(activity, messageConfig)
+    const facility = messageConfig.data.flags.dnd5e;
+    const actor = game.actors.get(facility.item.uuid.split(".")[1]);
+    const facilityItem = actor.items.get(facility.item.id);
+    const level = actor.items.filter(i => i.type === "class").reduce((acc, curr) => acc + curr.system.levels, 0);
+    const maxAmount = level >= 13 ? 5000 : level >= 9 ? 2000 : 500;
+    if(facilityItem.name.toLowerCase() === "storehouse" && facility.activity.type === "order") {
+        if(facility.order.costs.gold <= 0) {
+            Dialog.prompt({
+                title: "Storehouse",
+                content: "Sire, we cannot trade without any gold"
+            });
+            return false
+        } else if(facility.order.costs.gold > maxAmount) {
+            Dialog.prompt({
+                title: "Storehouse",
+                content: "Sire, we cannot hold that much gold for you."
+            });
+            return false
+        }
+    }
+})
+
 async function updateBastions(days) {
     const players = game.actors.filter((actor) => actor.type === 'character');
     for (const player of players) {
