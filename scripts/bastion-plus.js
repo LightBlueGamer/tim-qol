@@ -1,6 +1,6 @@
 import { bastionReward } from './bastion-rewards.js';
 
-Hooks.on(SimpleCalendar.Hooks.DateTimeChange, async (data) => {
+/*Hooks.on(SimpleCalendar.Hooks.DateTimeChange, async (data) => {
     console.log('DateTimeChange event detected');
     const trackedDateTimeStamp = SimpleCalendar.api.dateToTimestamp(
         game.settings.settings.get('mountain-module.time-tracker')
@@ -14,6 +14,11 @@ Hooks.on(SimpleCalendar.Hooks.DateTimeChange, async (data) => {
         SimpleCalendar.api.currentDateTime()
     );
     console.log(`Bastion progress updated by ${diffInDays} days`);
+});*/
+
+Hooks.on('updateWorldTime', (time) => {
+    const trackedTime = game.settings.settings.get('tim-qol.time-tracker').default;
+    console.log(game.time.calendar.difference(time, trackedTime));
 });
 
 async function updateBastions(days) {
