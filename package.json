@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "createSymlinks": "node ./tools/create-symlink.mjs",
-    "package": "node ./tools/package.mjs"
+    "package": "node ./tools/package.mjs",
+    "dbtojson": "node ./tools/pushLDBtoJSON.mjs",
+    "jsontodb": "node ./tools/pullJSONtoLDB.mjs",
+    "archive": "node ./tools/archive.mjs"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +18,7 @@
     "js-yaml": "^4.1.1"
   },
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.3",
     "foundryvtt-simple-calendar": "^2.4.18",
     "zip-a-folder": "^6.1.1"
   }

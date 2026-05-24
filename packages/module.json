@@ -1,7 +1,7 @@
 {
   "id": "tim-qol",
   "title": "Tim's Quality of Life Improvements",
-  "version": "14.0.0-12",
+  "version": "14.0.0-11",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -30,19 +30,19 @@
     }
   ],
   "packs": [
-      {
-        "name": "tim-qol-actors",
-        "label": "Actors",
-        "system": "dnd5e",
-        "path": "./packs/actors",
-        "type": "Actor",
-        "ownership": {
-            "PLAYER": "NONE",
-            "TRUSTED": "NONE",
-            "ASSISTANT": "OWNER",
-            "GAMEMASTER": "OWNER"
-        }
+    {
+      "name": "tim-qol-actors",
+      "label": "Actors",
+      "system": "dnd5e",
+      "path": "./packs/actors",
+      "type": "Actor",
+      "ownership": {
+        "PLAYER": "NONE",
+        "TRUSTED": "NONE",
+        "ASSISTANT": "OWNER",
+        "GAMEMASTER": "OWNER"
       }
+    }
   ],
   "authors": [
     {
@@ -52,7 +52,7 @@
   ],
   "url": "https://git.mot-dnd.org/Tim/tim-qol",
   "manifest": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/packages/module.json",
-  "download": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/packages/tim-qol.zip",
+  "download": "https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/packages/tim-qol-v14.0.0.zip",
   "description": "",
   "flags": {}
 }
