@@ -51,8 +51,8 @@
     }
   ],
   "url": "https://github.com/LightBlueGamer/tim-qol",
-  "manifest": "https://raw.githubusercontent.com/LightBlueGamer/tim-qol/master/packages/module.json",
-  "download": "https://github.com/LightBlueGamer/tim-qol/archive/refs/heads/master.zip",
+  "manifest": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.0/module.json",
+  "download": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.0/module.zip",
   "description": "",
   "flags": {}
 }

@@ -1,9 +1,5 @@
 # Tim's Quality of Life Improvements
-
-The core module for everything I have to offer!
-
-Download link: https://git.mot-dnd.org/Tim/tim-qol/raw/branch/master/module.json
-
+![GitHub Release](https://img.shields.io/github/v/release/LightBlueGamer/tim-qol) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/LightBlueGamer/tim-qol/total?label=Total%20Downloads) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/LightBlueGamer/tim-qol/latest/total?label=Latest%20Downloads)
 ## Features
 
 ### Bastion Automation
