@@ -3,7 +3,6 @@ foundry
 node_modules/
 mountain-core/
 tools/
-packs/
+/packs/
 package/
-src/
 packages/

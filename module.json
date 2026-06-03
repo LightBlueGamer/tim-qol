@@ -1,7 +1,7 @@
 {
   "id": "tim-qol",
   "title": "Tim's Quality of Life Improvements",
-  "version": "14.0.0-12",
+  "version": "14.0.1-1",
   "compatibility": {
     "minimum": "14",
     "verified": "14"
@@ -16,8 +16,8 @@
     ]
   },
   "esmodules": [
-    "scripts/module.js",
-    "scripts/bastion-plus.js"
+    "src/scripts/module.js",
+    "src/scripts/bastion-plus.js"
   ],
   "packFolders": [
     {
@@ -47,12 +47,12 @@
   "authors": [
     {
       "name": "Tim",
-      "flags": {}
+      "discord": "trij3rd"
     }
   ],
   "url": "https://github.com/LightBlueGamer/tim-qol",
-  "manifest": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.0/module.json",
-  "download": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.0/module.zip",
+  "manifest": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.1/module.json",
+  "download": "https://github.com/LightBlueGamer/tim-qol/releases/download/v14.0.1/module.zip",
   "description": "",
   "flags": {}
 }

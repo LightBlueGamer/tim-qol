@@ -1,3 +1,5 @@
+export const { DialogV2 } = foundry.applications.api;
+
 Hooks.once('ready', () => {
     console.log('Ready!');
     game.settings.register('tim-qol', 'time-tracker', {
